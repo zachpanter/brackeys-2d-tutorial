@@ -56,3 +56,11 @@ shape = SubResource("RectangleShape2D_fqqo4")
 sprite_frames = SubResource("SpriteFrames_fqqo4")
 autoplay = "default"
 frame_progress = 0.08864064
+
+[node name="RayCastRight" type="RayCast2D" parent="." unique_id=1403305244]
+position = Vector2(0, 6)
+target_position = Vector2(7, 0)
+
+[node name="RayCastLeft" type="RayCast2D" parent="." unique_id=1147896271]
+position = Vector2(0, 6)
+target_position = Vector2(-7, 0)

@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://daxelf1d3mfxx"]
 
+[ext_resource type="Script" uid="uid://ca2o47b3ni7dm" path="res://scripts/slime.gd" id="1_n6pvg"]
 [ext_resource type="PackedScene" uid="uid://c0y6insebvtgs" path="res://scenes/killzone.tscn" id="1_p2gj0"]
 [ext_resource type="Texture2D" uid="uid://cmeoxf0bmosrq" path="res://assets/sprites/slime_green.png" id="2_n6pvg"]
 
@@ -43,6 +44,7 @@ animations = [{
 }]
 
 [node name="Slime" type="Node2D" unique_id=477850242]
+script = ExtResource("1_n6pvg")
 
 [node name="Killzone" parent="." unique_id=737277186 instance=ExtResource("1_p2gj0")]
 

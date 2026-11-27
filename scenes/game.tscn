@@ -2,10 +2,12 @@
 
 [ext_resource type="PackedScene" uid="uid://c0y6insebvtgs" path="res://scenes/killzone.tscn" id="1_iywne"]
 [ext_resource type="PackedScene" uid="uid://cy3n743mxl30n" path="res://scenes/player.tscn" id="1_uwrxv"]
+[ext_resource type="FontFile" uid="uid://bddoklq55khlx" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="2_gee14"]
 [ext_resource type="Texture2D" uid="uid://b3d7hcqla4c1d" path="res://assets/sprites/world_tileset.png" id="2_yqjtg"]
 [ext_resource type="PackedScene" uid="uid://xnyuusryjss3" path="res://scenes/platform.tscn" id="3_lnu2h"]
 [ext_resource type="PackedScene" uid="uid://dqc5ixtekxypw" path="res://scenes/coin.tscn" id="4_lbhrr"]
 [ext_resource type="PackedScene" uid="uid://daxelf1d3mfxx" path="res://scenes/slime.tscn" id="6_p57ef"]
+[ext_resource type="Script" uid="uid://8c6i57xg441w" path="res://scripts/game_manager.gd" id="7_u5sy4"]
 
 [sub_resource type="Animation" id="Animation_lnu2h"]
 length = 0.001
@@ -213,6 +215,20 @@ sources/0 = SubResource("TileSetAtlasSource_lnu2h")
 
 [node name="game" type="Node2D" unique_id=697577759]
 
+[node name="GameManager" type="Node" parent="." unique_id=1677190261]
+unique_name_in_owner = true
+script = ExtResource("7_u5sy4")
+
+[node name="ScoreLabel" type="Label" parent="GameManager" unique_id=1867808703]
+offset_left = 212.0
+offset_right = 398.0
+offset_bottom = 33.0
+theme_override_fonts/font = ExtResource("2_gee14")
+theme_override_font_sizes/font_size = 14
+text = "You collected x coins"
+horizontal_alignment = 1
+autowrap_mode = 2
+
 [node name="Platforms" type="Node" parent="." unique_id=500788012]
 
 [node name="Platform2" parent="Platforms" unique_id=2012702529 instance=ExtResource("3_lnu2h")]
@@ -261,3 +277,5 @@ position = Vector2(56, -64)
 
 [node name="Slime" parent="." unique_id=477850242 instance=ExtResource("6_p57ef")]
 position = Vector2(168, 37)
+
+[node name="Labels" type="Node" parent="." unique_id=1824196016]
